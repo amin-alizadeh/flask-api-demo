@@ -98,6 +98,18 @@ flask db migrate -m "Your message here"
 flask db upgrade
 ```
 
+### DB Seed
+To pre-populate the database with some data you can run 
+```bash
+flask seed run
+```
+
+## Unit tests
+You can add more tests under the `tests` folder. To run the tests you can execute the command
+```bash
+python -m unittest
+```
+The command discovers all the unit tests and executes them.
 ---
 
 ## Running the Application
