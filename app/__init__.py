@@ -1,7 +1,7 @@
 from config import Config
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-#from flask_seeder import FlaskSeeder
+from flask_seeder import FlaskSeeder
 from flask_migrate import Migrate
 from flask_cors import CORS
 from flask_marshmallow import Marshmallow
@@ -36,8 +36,8 @@ def create_app(config_class=Config):
         else:
             migrate.init_app(app, db, compare_type=True)
 
-        #seeder = FlaskSeeder()
-        #seeder.init_app(app, db)
+        seeder = FlaskSeeder()
+        seeder.init_app(app, db)
         
         ma.init_app(app)
         jwt.init_app(app)
